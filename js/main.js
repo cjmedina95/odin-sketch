@@ -1,8 +1,7 @@
 
 function addDiv(node) {
     const addedDiv = document.createElement("div");
-    addedDiv.style.width = "16px";
-    addedDiv.style.height = "16px";
+    addedDiv.className = "cell";
     node.appendChild(addedDiv, node);
 }
 

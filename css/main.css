@@ -8,9 +8,18 @@ main {
     justify-content: center;
 }
 
+.cell {
+    width: 14px;
+    height: 14px;
+    border-color: lightgrey;
+    border-style: solid;
+    border-width: 1px;
+}
+
 #sketchContainer {
     display: flex;
     flex-wrap: wrap;
     border-color: black;
     border-style: solid;
+    border-width: 2px;
 }
