@@ -9,17 +9,35 @@ main {
 }
 
 .cell {
-    width: 14px;
-    height: 14px;
     border-color: lightgrey;
     border-style: solid;
     border-width: 1px;
 }
 
-#sketchContainer {
+.buttons {
     display: flex;
-    flex-wrap: wrap;
-    border-color: black;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+button {
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+#borderContainer {
+    padding-top: 92px;
+    padding-bottom: 92px;
+    padding-left: 256px;
+    padding-right: 256px;
+    background-color: red;
+    border-radius: 8px;
+}
+
+#sketchContainer {
+    background-color:white;
+    display: grid;
+    border-color: darkred;
     border-style: solid;
-    border-width: 2px;
+    border-width: 4px;
 }
