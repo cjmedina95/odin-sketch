@@ -12,13 +12,17 @@
 </head>
 <body>
     <main>
-        <div id="borderContainer">
+        <div id="borderContainer" >
             <div class="buttons">
                 <button id="reset">Reset!</button>
                 <button id="new">New size!</button>
+                <label class="switch">
+                    <input type="checkbox" id="switchValue">
+                    <span class="slider">Enable/Disable rainbow coloring</span>
+                </label>
             </div>
             
-            <div id="sketchContainer"></div>
+            <div id="sketchContainer" onmousedown="return false"></div>
         </div>
     </main>
 </body>

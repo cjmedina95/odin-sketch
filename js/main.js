@@ -32,15 +32,29 @@ function addCell(node, cellSize) {
     cell.style.width = (cellSize-1) + "px";
     cell.style.height = (cellSize-1) + "px";
     cell.addEventListener("mousedown", (event) => {
-        event.target.style.backgroundColor = randomColor(event.target.style.backgroundColor);
+        const toggleState = document.querySelector("#switchValue").checked;
+        console.log(toggleState);
+        if (toggleState == true) {
+            event.target.style.backgroundColor = randomColor(event.target.style.backgroundColor);
+        }
+        else {
+            event.target.style.backgroundColor = "rgb(0,0,0)";
+        }
         mouseDown = true;
     }, false);
     cell.addEventListener("mouseup", (event) => {
         mouseDown = false;
     })
     cell.addEventListener("mouseenter", (event) => {
+        const toggleState = document.querySelector("#switchValue").checked;
+        console.log(toggleState);
         if (mouseDown) {
-            event.target.style.backgroundColor = randomColor(event.target.style.backgroundColor);
+            if (toggleState == true) {
+                event.target.style.backgroundColor = randomColor(event.target.style.backgroundColor);
+            }
+            else {
+                event.target.style.backgroundColor = "rgb(0,0,0)";
+            }
         }
     }, false);
     node.appendChild(cell, node);
@@ -52,6 +66,9 @@ const sketcherSize = 512;
 
 sketcher.style.width = sketcherSize.toString() + "px";
 sketcher.style.height = sketcherSize.toString() + "px";
+sketcher.addEventListener("mouseleave", (event) => {
+    mouseDown = false;
+})
 
 const newButton = document.querySelector("#new");
 const resetButton = document.querySelector("#reset");
